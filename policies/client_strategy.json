@@ -1,0 +1,23 @@
+{
+  "name": "client_strategy",
+  "scope": "artifact",
+  "fields": {
+    "person_name": {"op": "pseudonymize", "format": "Person_{n}"},
+    "business_name": {"op": "pseudonymize", "format": "Org_{n}"},
+    "model_name": {"op": "pseudonymize", "format": "Model_{n}"},
+    "email": {"op": "pseudonymize", "format": "Email_{n}"},
+    "phone": {"op": "pseudonymize", "format": "Phone_{n}"},
+    "url": {"op": "pseudonymize", "format": "Url_{n}"},
+    "api_key": {"op": "redact"},
+    "secret_token": {"op": "redact"},
+    "exact_price": {"op": "generalize", "style": "business_magnitude"},
+    "budget": {"op": "generalize", "style": "business_magnitude"},
+    "file_path": {"op": "pseudonymize", "format": "Path_{n}"},
+    "account_id": {"op": "pseudonymize", "format": "Account_{n}"},
+    "location": {"op": "generalize", "style": "region_or_generic"},
+    "date": {"op": "generalize", "style": "relative_time"},
+    "client_status": {"op": "generalize", "style": "business_status"},
+    "business_relationship": {"op": "generalize", "style": "relationship_status"},
+    "private_note": {"op": "generalize", "style": "semantic_summary"}
+  }
+}
