@@ -1,0 +1,57 @@
+{
+  "kept": 2000,
+  "heldout": 150,
+  "target": 2000,
+  "spend_total": 0.9295,
+  "spend_by_model": {
+    "cohere/command-r-08-2024": 0.0002,
+    "amazon/nova-lite-v1": 0.0001,
+    "mistralai/mistral-small-3.2-24b-instruct": 0.0001,
+    "deepseek/deepseek-chat-v3.1": 0.0002,
+    "meta-llama/llama-3.3-70b-instruct": 0.0001,
+    "gen": 0.8647,
+    "openai/gpt-4o-mini": 0.0641
+  },
+  "category_coverage": {
+    "client_status": 1107,
+    "role_alias": 400,
+    "model_name": 332,
+    "business_relationship": 899,
+    "private_note": 396,
+    "file_path": 271,
+    "location": 311,
+    "url": 196,
+    "business_name": 283,
+    "person_name": 320,
+    "email": 298,
+    "date": 256,
+    "budget": 272,
+    "account_id": 328
+  },
+  "drops": {
+    "missing_verbatim": 6606,
+    "contaminated": 430,
+    "dup": 0,
+    "toolong": 0,
+    "error": 0,
+    "empty": 0,
+    "unlabeled_extra": 2167
+  },
+  "bank_sizes": {
+    "client_status": 79,
+    "business_relationship": 74,
+    "role_alias": 76,
+    "private_note": 6
+  },
+  "train_models": [
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "meta-llama/llama-3.3-70b-instruct",
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemini-2.5-flash",
+    "amazon/nova-lite-v1",
+    "cohere/command-r-08-2024",
+    "microsoft/phi-4"
+  ],
+  "heldout_model": "openai/gpt-4o-mini",
+  "final_after_codename_filter": 1994
+}

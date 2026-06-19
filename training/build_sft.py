@@ -39,6 +39,10 @@ def target_json(case: dict) -> str:
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     rows = [json.loads(l) for l in SRC.open() if l.strip()]
+    extra = Path(__file__).resolve().parent / "expansion" / "train_new.jsonl"
+    if extra.exists():
+        rows += [json.loads(l) for l in extra.open() if l.strip()]
+        print(f"merged expansion/train_new.jsonl -> {len(rows)} total cases")
     examples = []
     for case in rows:
         if "raw" not in case:
